@@ -1,0 +1,28 @@
+html, body { margin: 0; height: 100%; background: #e7e4dc; }
+.desktop { min-height: 100%; display: grid; place-items: center; padding: 28px 220px 28px 28px; }
+.window {
+  width: min(1180px, calc(100vw - 250px)); height: min(760px, calc(100vh - 56px));
+  background: #fff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(40, 44, 32, 0.18); position: relative;
+  display: flex; flex-direction: column;
+}
+@media (max-width: 1100px) {
+  .desktop { padding: 8px; }
+  .window { width: calc(100vw - 16px); height: calc(100vh - 16px); }
+}
+.titlebar {
+  height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 14px;
+  background: #f3f2ee; border-bottom: 1px solid var(--c-line); flex: none;
+}
+.lights { display: flex; gap: 6px; }
+.lights i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.lights i:nth-child(1) { background: #ff5f57; }
+.lights i:nth-child(2) { background: #febc2e; }
+.lights i:nth-child(3) { background: #28c840; }
+.titlebar em { font-style: normal; color: #888; font-size: 12px; }
+.split.mac { grid-template-columns: 300px 1fr; height: 100%; }
+.split.mac > :last-child { min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+.split.mac .thread, .split.mac .ask { flex: 1; }
+.icon-btn.wide { width: auto; padding: 0 10px; border-radius: 999px; font-size: 12px; }
+.drawer { width: 280px; }
+.page.mac-wide { max-width: 840px; }
